@@ -1,0 +1,38 @@
+html, body {
+    background-image: url(../../../assets/1.jpg); 
+    overflow: hidden;   
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.btn-custom {
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    color: white;
+    margin-top: 20px; /* Ajusta esta cantidad según sea necesario */
+}
+.card {
+    width: 100%;
+    max-width: 400px;
+    background-color: white; /* Color de fondo sólido */
+    border: 1px solid #ccc; /* Borde opcional */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+}
+.form-group {
+    position: relative;
+}
+.form-group .form-control {
+    padding-left: 40px; /* Espacio para el ícono */
+    
+}
+.form-group .input-icon {
+    position: absolute;
+    left: 10px;
+    top: 70%;
+    transform: translateY(-50%);
+    color: #aaa;
+}

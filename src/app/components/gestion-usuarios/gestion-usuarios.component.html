@@ -1,0 +1,191 @@
+
+<body>
+<div class="container-fluid">
+  <div class="main-container">
+    <div class="row">
+      <div class="col-sm-8">
+        <h1 style="text-align: center;">Gestión de Usuarios</h1>
+      </div>
+      <div class="col-sm-4">
+        <div class="alert alert-success alert-dismissable">
+          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+          Notificación
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <h2>Agregar Usuarios</h2>
+        <form class="form-horizontal">
+          <!-- input name -->
+          <div class="form-group">
+            <label for="name" class="control-label col-sm-2">Nombre</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="name" name="name" placeholder="Escribe aquí el nombre">
+            </div>
+          </div>
+          <!-- input position -->
+          <div class="form-group">
+            <label for="position" class="control-label col-sm-2">Puesto</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="position" name="position" placeholder="Escribe aquí el puesto">
+            </div>
+          </div>
+          <!-- input salary -->
+          <div class="form-group">
+            <label for="salary" class="control-label col-sm-2">Salario</label>
+            <div class="col-sm-10">
+              <input type="number" class="form-control" id="salary" name="salary" placeholder="Escribe aquí el salario">
+            </div>
+          </div>
+          <!-- input age -->
+          <div class="form-group">
+            <label for="edad" class="control-label col-sm-2">Edad</label>
+            <div class="col-sm-10">
+              <input type="number" class="form-control" id="edad" name="edad" placeholder="Escribe aquí la edad">
+            </div>
+          </div>
+          <!-- input Sex -->
+          <div class="form-group">
+            <label for="sex" class="control-label col-sm-2">Sexo</label>
+            <div class="col-sm-10">
+              <div class="form-check">
+                <input type="radio" class="form-check-input" id="sexM" name="sex" value="M"> Masculino
+              </div>
+              <div class="form-check">
+                <input type="radio" class="form-check-input" id="sexF" name="sex" value="F"> Femenino
+              </div>
+            </div>
+          </div>
+          <!-- input email -->
+          <div class="form-group">
+            <label for="email" class="control-label col-sm-2">E-mail</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control" id="email" name="email" placeholder="Escribe aquí el correo electrónico">
+            </div>
+          </div>
+          <!-- button -->
+          <div class="form-group">
+            <div class="col-sm-10 col-sm-offset-2">
+              <button type="submit" class="btn btn-success">Guardar</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="row table-container">
+      <div class="col-sm-12">
+        <h2>Datos</h2>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <td>Nombre</td>
+              <td>Puesto</td>
+              <td>Salario</td>
+              <td>Sexo</td>
+              <td>Acciones</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Hugo</td>
+              <td>Programador Jr.</td>
+              <td>10000</td>
+              <td>M</td>
+              <td>
+                <a class="btn btn-success" href="#">Editar</a>
+                <a class="btn btn-danger" href="#">Borrar</a>
+              </td>
+            </tr>
+            <tr>
+              <td>Paco</td>
+              <td>Programador Sr.</td>
+              <td>15000</td>
+              <td>M</td>
+              <td>
+                <a class="btn btn-success" href="#">Editar</a>
+                <a class="btn btn-danger" href="#">Borrar</a>
+              </td>
+            </tr>
+            <tr>
+              <td>Luis</td>
+              <td>Administrador de Red</td>
+              <td>40000</td>
+              <td>M</td>
+              <td>
+                <a class="btn btn-success" href="#">Editar</a>
+                <a class="btn btn-danger" href="#">Borrar</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <h2>Actualizar</h2>
+        <form class="form-horizontal">
+          <!-- input name -->
+          <div class="form-group">
+            <label for="name" class="control-label col-sm-2">Nombre</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="name" name="name" placeholder="Escribe aquí el nombre">
+            </div>
+          </div>
+          <!-- input position -->
+          <div class="form-group">
+            <label for="position" class="control-label col-sm-2">Puesto</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="position" name="position" placeholder="Escribe aquí el puesto">
+            </div>
+          </div>
+          <!-- input salary -->
+          <div class="form-group">
+            <label for="salary" class="control-label col-sm-2">Salario</label>
+            <div class="col-sm-10">
+              <input type="number" class="form-control" id="salary" name="salary" placeholder="Escribe aquí el salario">
+            </div>
+          </div>
+          <!-- input age -->
+          <div class="form-group">
+            <label for="edad" class="control-label col-sm-2">Edad</label>
+            <div class="col-sm-10">
+              <input type="number" class="form-control" id="edad" name="edad" placeholder="Escribe aquí la edad">
+            </div>
+          </div>
+          <!-- input Sex -->
+          <div class="form-group">
+            <label for="sex" class="control-label col-sm-2">Sexo</label>
+            <div class="col-sm-10">
+              <div class="form-check">
+                <input type="radio" class="form-check-input" id="sexM" name="sex" value="M"> Masculino
+              </div>
+              <div class="form-check">
+                <input type="radio" class="form-check-input" id="sexF" name="sex" value="F"> Femenino
+              </div>
+            </div>
+          </div>
+          <!-- input email -->
+          <div class="form-group">
+            <label for="email" class="control-label col-sm-2">E-mail</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control" id="email" name="email" placeholder="Escribe aquí el correo electrónico">
+            </div>
+          </div>
+          <!-- button -->
+          <div class="form-group">
+            <div class="col-sm-10 col-sm-offset-2">
+              <button type="submit" class="btn btn-success">Guardar</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+

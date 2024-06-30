@@ -1,0 +1,106 @@
+<body>
+<div class="container-fluid">
+  <div class="main-container" id="gestionArchivos">
+    <div class="row">
+      <div class="col-sm-8">
+        <h1 style="text-align: center;">Gestión de Archivos</h1>
+      </div>
+      <div class="col-sm-4">
+        <div class="alert alert-success alert-dismissable" id="notification" style="display: none;">
+          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+          <span id="notificationMessage"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <h2>Agregar Archivo</h2>
+        <form class="form-horizontal" id="uploadForm">
+          <!-- input file name -->
+          <div class="form-group">
+            <label for="fileName" class="control-label col-sm-2">Nombre del Archivo</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="fileName" name="fileName" placeholder="Escribe aquí el nombre del archivo">
+            </div>
+          </div>
+          <!-- input file -->
+          <div class="form-group">
+            <label for="file" class="control-label col-sm-2">Seleccionar Archivo</label>
+            <div class="col-sm-10">
+              <input type="file" class="form-control" id="file" name="file">
+            </div>
+          </div>
+          <!-- button -->
+          <div class="form-group">
+            <div class="col-sm-10 col-sm-offset-2">
+              <button type="button" class="btn btn-success" onclick="uploadFile()">Subir Archivo</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="row table-container">
+      <div class="col-sm-12">
+        <h2>Archivos Subidos</h2>
+        <table class="table table-bordered" id="fileTable">
+          <thead>
+            <tr>
+              <td>Nombre del Archivo</td>
+              <td>Tamaño</td>
+              <td>Fecha de Subida</td>
+              <td>Acciones</td>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Example files -->
+            <tr>
+              <td>archivo1.txt</td>
+              <td>15 KB</td>
+              <td>2024-06-27</td>
+              <td>
+                <a class="btn btn-success" href="#" onclick="notify('Descargar', 'archivo1.txt')">Descargar</a>
+                <a class="btn btn-primary" href="#" onclick="notify('Visualizar', 'archivo1.txt')">Visualizar</a>
+                <a class="btn btn-danger" href="#" onclick="deleteFile(this, 'archivo1.txt')">Borrar</a>
+              </td>
+            </tr>
+            <tr>
+              <td>imagen.png</td>
+              <td>250 KB</td>
+              <td>2024-06-27</td>
+              <td>
+                <a class="btn btn-success" href="#" onclick="notify('Descargar', 'imagen.png')">Descargar</a>
+                <a class="btn btn-primary" href="#" onclick="notify('Visualizar', 'imagen.png')">Visualizar</a>
+                <a class="btn btn-danger" href="#" onclick="deleteFile(this, 'imagen.png')">Borrar</a>
+              </td>
+            </tr>
+            <tr>
+              <td>documento.pdf</td>
+              <td>1.5 MB</td>
+              <td>2024-06-27</td>
+              <td>
+                <a class="btn btn-success" href="#" onclick="notify('Descargar', 'documento.pdf')">Descargar</a>
+                <a class="btn btn-primary" href="#" onclick="notify('Visualizar', 'documento.pdf')">Visualizar</a>
+                <a class="btn btn-danger" href="#" onclick="deleteFile(this, 'documento.pdf')">Borrar</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-container" id="notificaciones" style="display:none;">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1 style="text-align: center;">Notificaciones</h1>
+        <ul class="notification-list" id="notificationList">
+          <!-- Las notificaciones aparecerán aquí -->
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+

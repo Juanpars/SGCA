@@ -1,0 +1,37 @@
+<body>
+    <div class="container mt-4">
+      <h2>Archivos</h2>
+  
+      <!-- Search Bar -->
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Buscar archivos..." id="searchInput">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button" id="searchButton">Buscar</button>
+        </div>
+      </div>
+  
+      <!-- Filter -->
+      <div class="form-group">
+        <label for="categoryFilter">Filtrar por categoría:</label>
+        <select class="form-control" id="categoryFilter">
+            <option value="category1">Instrumentos de trabajo</option>
+            <option value="category2">Planeacion</option>
+            <option value="category3">Listas muestras</option>
+        </select>
+      </div>
+  
+      <!-- Table to display files -->
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Categoría</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="fileList">
+          <!-- File data will be dynamically added here -->
+        </tbody>
+      </table>
+    </div>
+    </body>

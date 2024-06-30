@@ -1,0 +1,50 @@
+<body>
+  <div class="sidebar">
+    <div id="admin-menu" class="menu" [ngStyle]="{'display': userRole === 'admin' ? 'block' : 'none'}">
+      <button (click)="selectOption('busqueda')">Búsqueda</button>
+      <button (click)="selectOption('notificaciones')">Notificaciones</button>
+      <button (click)="selectOption('mensajes')">Mensajes</button>
+      <button (click)="selectOption('gestion-archivos')">Gestión de Archivos</button>
+      <button (click)="selectOption('gestion-usuarios')">Gestión de Usuarios</button>
+      <button (click)="selectOption('boveda')">Bóveda</button>
+      <button (click)="logout()">Cerrar Sesión</button>
+    </div>
+
+    <div id="jefe-menu" class="menu" [ngStyle]="{'display': userRole === 'jefe' ? 'block' : 'none'}">
+      <button (click)="selectOption('busqueda')">Búsqueda</button>
+      <button (click)="selectOption('notificaciones')">Notificaciones</button>
+      <button (click)="selectOption('mensajes')">Mensajes</button>
+      <button (click)="selectOption('boveda')">Bóveda</button>
+      <button (click)="logout()">Cerrar Sesión</button>
+    </div>
+
+    <div id="usuario-menu" class="menu" [ngStyle]="{'display': userRole === 'usuario' ? 'block' : 'none'}">
+      <button (click)="selectOption('busqueda')">Búsqueda</button>
+      <button (click)="selectOption('notificaciones')">Notificaciones</button>
+      <button (click)="selectOption('mensajes')">Mensajes</button>
+      <button (click)="logout()">Cerrar Sesión</button>
+    </div>
+  </div>
+
+  <div class="content">
+    <p id="role-message">Has ingresado como {{ userRole | titlecase }}</p>
+    <div *ngIf="selectedOption === 'busqueda'">
+      <app-busqueda></app-busqueda>
+    </div>
+    <div *ngIf="selectedOption === 'notificaciones'">
+      <app-notificaciones></app-notificaciones>
+    </div>
+    <div *ngIf="selectedOption === 'mensajes'">
+      <app-mensajes></app-mensajes>
+    </div>
+    <div *ngIf="selectedOption === 'gestion-archivos'">
+      <app-gestion-archivos></app-gestion-archivos>
+    </div>
+    <div *ngIf="selectedOption === 'gestion-usuarios'">
+      <app-gestion-usuarios></app-gestion-usuarios>
+    </div>
+    <div *ngIf="selectedOption === 'boveda'">
+      <app-boveda></app-boveda>
+    </div>
+  </div>
+</body>

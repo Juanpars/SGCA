@@ -1,0 +1,42 @@
+<body>
+    <header>
+        <h1>Administración de Documentos Obsoletos</h1>
+        <input type="text" id="search-bar" placeholder="Buscar documentos...">
+        <button id="search-button">Buscar</button>
+        <div class="filters">
+            <label for="category-filter">Categoría:</label>
+            <select id="category-filter">
+                <option value="all">Todas</option>
+                <option value="category1">Instrumentos de trabajo</option>
+                <option value="category2">Planeacion</option>
+                <option value="category3">Listas muestras</option>
+            </select>
+            <label for="date-filter">Fecha:</label>
+            <select id="date-filter">
+                <option value="all">Todas</option>
+                <option value="last-week">Última semana</option>
+                <option value="last-month">Último mes</option>
+                <option value="last-year">Último año</option>
+            </select>
+        </div>
+    </header>
+    <main>
+        <section class="content">
+            <h2>Documentos Obsoletos</h2>
+            <table>
+                <tr>
+                    <th>Clave</th>
+                    <th>Nombre</th>
+                    <th>Versión</th>
+                    <th>Fecha de última versión</th>
+                </tr>
+                <tr>
+                    <td>D-OSC-30</td>
+                    <td>Estructura de códigos de las unidades orgánicas</td>
+                    <td>Rev. 5</td>
+                    <td>10/Abril/2016</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+</body>
